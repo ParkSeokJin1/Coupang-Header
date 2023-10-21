@@ -1,0 +1,412 @@
+/* 헤더 */
+
+ul {
+  list-style: none;
+
+}
+
+header {
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+
+
+
+.loginbar {
+  display: flex;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-gray-100);
+
+}
+
+
+
+
+.loginbarlist {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto;
+  width: 1020px;
+  height: 24px;
+  padding-right: 0px;
+
+
+}
+
+.text {
+  height: 14px;
+  font-size: 12px;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin: 5px 8px;
+  flex-shrink: 0;
+}
+
+.loginbar li:nth-child(4) {
+  order: -2;
+  margin-left: 6px;
+}
+
+.loginbar li:last-child {
+  order: -1;
+  margin-right: 700px;
+ 
+}
+
+
+
+
+
+
+
+li.text::marker {
+  color: var(--color-gray-100);
+}
+
+
+
+
+
+
+
+.header {
+  width: 1020px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 110px 910px;
+  grid-template-areas: 
+    "button inner";
+}
+
+
+.button--category {
+  height: 116px;
+  font-size: 12px;
+  padding: 72px 0 30px;
+  font-weight:400;
+  line-height: 120%;
+  border: var(--color-blue-600);
+  color: var(--color-white);
+  background-color: var(--color-blue-600);
+  background-image: url("/assets/icon/hamburger.svg");
+  background-repeat: no-repeat;
+  background-position: center 30px;
+  grid-area: button;
+
+}
+
+
+.head-inner {
+  display: grid;
+  padding: 29px 0 0 36px;
+  grid-template-rows: 40px 42px;
+  grid-template-columns: 176px 560px 80px 1fr;
+  height: 116px;
+  grid-area: inner;
+
+}
+
+
+
+
+.logo {
+  display: flex;
+  background-image: url('/assets/logo/logo.svg');
+  background-size: cover;
+
+}
+
+h1 {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+
+/* 검색창 */
+
+.search {
+   width: 516px;
+   height: 40px;
+   position: relative;
+   font-size: 12px;
+   font-weight: 400;
+   line-height: 120%;
+   margin: 0 22px;
+   border: 1px solid var(--color-blue-600);
+}
+
+#search_combo {
+  appearance: none;
+  border: none;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 135px;
+  height: 38px;
+  padding: 12px 12px;
+  color: var(--color-blue-700);
+  border-right: 1px solid var(--color-gray-100);
+  background-color: transparent;
+  outline: none;
+  z-index: 1;
+}
+
+
+#search_combo::-ms-expand {
+  display: none;
+}
+
+#search-img {
+  position: absolute;
+  left: 94px;
+  width: 40px;
+  height: 40px;
+}
+
+/* 검색창 */
+.search__input {
+  position: absolute;
+  width: 300px;
+  height: 38px;
+  top: 0;
+  right: 79px;
+  padding: 13px 10px;
+  border: none;
+  color: var(--color-gray-600);
+  outline: none;
+}
+
+/* 키워드 버튼 */
+
+.voice-search {
+  position: absolute;
+  width: 39px;
+  height: 38px;
+  border: none;
+  top: 0;
+  right: 40px;
+  background-color: var(--color-white);
+  background-image: url("/assets/icon/mic.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.keyword-search {
+  position: absolute;
+  width: 39px;
+  height: 38px;
+  border: none;
+  top: 0;
+  right: 0;
+  background-color: var(--color-white);
+  background-image: url("/assets/icon/search.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+
+/* 마이쿠팡 */
+
+.myCoupang {
+  position: relative;
+  width: 90px;
+  text-align: center;
+  
+
+}
+
+.myCoupang button {
+  background-image: url("/assets/icon/my-coupang.svg")
+}
+
+.myCoupang ul {
+  display: none;
+}
+
+.myCoupang.is--active ul {
+  display: block;
+  width: 90px;
+  margin: 0;
+  margin-top: 4px;
+  padding: 24px 0;
+  border: 1px solid var(--color-gray-300);
+  background-color: var(--color-white);  
+
+
+}
+
+.myCoupang.is--active ul::after {
+  position: absolute;
+  content: '';
+  width: 7px;
+  height: 7px;
+  top: 58px;
+  right: 41px;
+  border: 1px solid var(--color-gray-300);
+  border-width: 1px 1px 0 0;
+  background-color: var(--color-white);
+  transform: rotate(-45deg);
+}
+
+
+.myCoupang.is--active li {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+/* 장바구니 */
+.cart {
+  position: relative;
+}
+
+.cart button {
+  background-image: url("/assets/icon/cart.svg");
+}
+
+.cart-msg {
+  display: none;
+}
+
+.cart.cart--empty .cart-msg {
+  display: block;
+  position: absolute;
+  width: 281px;
+  height: 100px;
+  margin: 3px;
+  padding: 36px 0;
+  right: 0;
+  line-height: 20px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+
+}
+
+.cart.cart--empty .cart-msg p {
+  margin: 0;
+}
+
+.cart.cart--empty .cart-msg::after {
+    position: absolute;
+    content: '';
+    width: 7px;
+    height: 7px;
+    top: -5px;
+    right: 25px;
+    border: 1px solid var(--color-gray-300);
+    border-width: 1px 1px 0 0;
+    background-color: var(--color-white);
+    transform: rotate(-45deg);
+}
+
+
+
+
+
+
+
+#count {
+   position: absolute;
+   width: 18px;
+   height: 18px;
+   top: 0;
+   right: 0;
+   font-size: 12px;
+   color: var(-color-white);
+   font-weight: 400;
+   line-height: 120%;
+   margin: 1px 0px 21px 22px;
+   text-align: center;
+   border-radius: 50%;
+   background-color: var(--color-blue-600);
+
+
+
+}
+
+
+
+.click-button {
+  border: none;
+  height: 58px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: center;
+  padding-top: 40px;
+  background-color: var(--color-white);
+  background-size: 40px;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+
+/* 타입 네비게이션 */
+
+.navi {
+  display: grid;
+  grid-column: 1 / 4;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+
+.navi ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.navi li {
+  display: inline-block;
+  width: 67px;
+  height: 26px;
+  margin: 0;
+  margin-right: 2px;
+  text-align: center;
+  padding: 6px 0;
+
+}
+
+.navi li:first-child {
+  width: 90px;
+}
+
+.navi li:nth-child(2) {
+  width: 100px;
+}
+
+.navi li:nth-child(3) {
+   width: 110px;
+}
+
+
+.navi li img.new {
+  margin-left: 4px;
+}
+
+.navi li img.rocket,
+.navi li img.fresh {
+  margin-right: 4px;
+}
+
